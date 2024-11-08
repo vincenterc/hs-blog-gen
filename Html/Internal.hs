@@ -36,9 +36,9 @@ ol_ =
 code_ :: String -> Structure
 code_ = Structure . el "pre" . escape
 
-append_ :: Structure -> Structure -> Structure
-append_ c1 c2 =
-  Structure (getStructureString c1 <> getStructureString c2)
+instance Semigroup Structure where
+  (<>) c1 c2 =
+    Structure (getStructureString c1 <> getStructureString c2)
 
 render :: Html -> String
 render html =
