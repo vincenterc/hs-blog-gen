@@ -5,6 +5,9 @@ module Html
     html_,
     h_,
     p_,
+    ul_,
+    ol_,
+    code_,
     render,
   )
 where
