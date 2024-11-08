@@ -7,7 +7,7 @@ myhtml :: Html
 myhtml =
   html_
     "My title"
-    ( h1_ "Heading"
+    ( h_ 1 "Heading"
         <> p_ "Paragraph #1"
         <> p_ "Paragraph #2"
     )

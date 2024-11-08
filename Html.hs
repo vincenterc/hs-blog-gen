@@ -3,8 +3,8 @@ module Html
     Title,
     Structure,
     html_,
+    h_,
     p_,
-    h1_,
     render,
   )
 where
