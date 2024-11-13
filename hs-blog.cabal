@@ -21,6 +21,8 @@ library
     hs-source-dirs:   src
     build-depends:
         base
+      , directory 
+      , filepath 
     exposed-modules:
       HsBlog
         HsBlog.Convert
