@@ -1,3 +1,7 @@
+-- | Markup to HTML conversion module.
+--
+-- This module handles converting documents written in our custom
+-- Markup language into HTML pages.
 module HsBlog.Convert where
 
 import HsBlog.Env (Env (..))

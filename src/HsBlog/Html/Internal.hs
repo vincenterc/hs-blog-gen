@@ -15,6 +15,10 @@ newtype Content
 newtype Head
   = Head String
 
+-- * HTML EDSL
+
+-- | Construct an HTML page from a `Head`
+--   and a `Structure`.
 html_ :: Head -> Structure -> Html
 html_ (Head head) content =
   Html
@@ -43,6 +47,8 @@ instance Semigroup Head where
 instance Monoid Head where
   mempty = Head ""
 
+-- ** Structure
+
 p_ :: Content -> Structure
 p_ = Structure . el "p" . getContentString
 
@@ -66,6 +72,8 @@ instance Semigroup Structure where
 
 instance Monoid Structure where
   mempty = Structure ""
+
+-- ** Content
 
 txt_ :: String -> Content
 txt_ = Content . escape

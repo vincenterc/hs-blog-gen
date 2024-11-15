@@ -11,12 +11,22 @@ import Numeric.Natural
 type Document =
   [Structure]
 
+-- | Represents a single markup structure. Such as:
+--
+-- - A paragraph
+-- - An unordered list
+-- - A code block
 data Structure
-  = Heading Natural String
-  | Paragraph String
-  | UnorderedList [String]
-  | OrderedList [String]
-  | CodeBlock [String]
+  = -- | A section heading with a level
+    Heading Natural String
+  | -- | A paragraph
+    Paragraph String
+  | -- | An unordered list of strings
+    UnorderedList [String]
+  | -- | An ordered list of strings
+    OrderedList [String]
+  | -- | A code block
+    CodeBlock [String]
   deriving (Eq, Show)
 
 parse :: String -> Document
