@@ -1,6 +1,6 @@
-# hs-blog
+# hs-blog-gen
 
-A simple blog generator.
+A simple blog generator in Haskell.
 
 ### References:
 
